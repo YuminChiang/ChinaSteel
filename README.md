@@ -80,9 +80,6 @@ Epoch 2/20 - Train Loss: 0.321 - Val Accuracy: 87.1%
 **Wandb Logging:**
 - Live charts for loss and accuracy curves
 - Downloadable checkpoints and metrics
-- Example:
-  - ![Wandb Loss Curve](wandb_loss_curve_example.png)
-  - ![Wandb Accuracy Curve](wandb_acc_curve_example.png)
 
 **Model Checkpoint:**
 - Saved automatically as `checkpoints/model_best.pth` when improved
