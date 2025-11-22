@@ -85,7 +85,7 @@ class Trainer:
         
         for epoch in range(1, epochs + 1):
             # Train
-            train_loss, train_acc, train_f1 = self._train_epoch(epoch)
+            train_loss, train_acc = self._train_epoch(epoch)
             
             # Val
             val_loss, val_acc, val_f1, _, _ = self._validate(phase="Val")
@@ -107,7 +107,7 @@ class Trainer:
             })
 
             print(f"Epoch {epoch} | "
-                  f"Train: Loss={train_loss:.4f} Acc={train_acc:.1f}% F1={train_f1:.3f} | "
+                  f"Train: Loss={train_loss:.4f} Acc={train_acc:.1f}% | "
                   f"Val: Loss={val_loss:.4f} Acc={val_acc:.1f}% F1={val_f1:.3f}")
 
             if val_acc > self.best_acc:
