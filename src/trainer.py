@@ -48,9 +48,8 @@ class Trainer:
 
         epoch_loss = running_loss / len(self.train_loader)
         epoch_acc = accuracy_score(all_targets, all_preds) * 100
-        epoch_f1 = f1_score(all_targets, all_preds, average='macro')  
         
-        return epoch_loss, epoch_acc, epoch_f1
+        return epoch_loss, epoch_acc
 
     @torch.no_grad()
     def _validate(self, loader=None, phase="Val"):
@@ -102,7 +101,6 @@ class Trainer:
                 "epoch": epoch,
                 "train/loss": train_loss,
                 "train/acc": train_acc,
-                "train/f1": train_f1,
                 "val/loss": val_loss,
                 "val/acc": val_acc,
                 "val/f1": val_f1,
