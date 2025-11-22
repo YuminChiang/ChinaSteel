@@ -96,7 +96,6 @@ class Trainer:
             else:
                 current_lr = self.optimizer.param_groups[0]['lr']
 
-            # WandB Logging (加入 F1 Score)
             wandb.log({
                 "epoch": epoch,
                 "train/loss": train_loss,
