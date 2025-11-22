@@ -41,7 +41,7 @@ cd ChinaSteel
 ### 2. Run the Training Pipeline
 
 ```bash
-python main.py --config configs/train.yaml
+python main.py
 ```
 
 **Common Arguments:**
